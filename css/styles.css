@@ -1,0 +1,16 @@
+body{
+    background-color: blue;
+}
+
+#login{
+    background-color: white;
+}
+
+
+#submitBtn{
+    border-color: black;
+    border-width: 2%;
+    padding: 10px 10px 10px 10px;
+    margin-left: 50%;
+    margin-right: 50%;
+}
