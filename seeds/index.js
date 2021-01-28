@@ -7,18 +7,18 @@ const sequelize = require('../config/connection');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
-  console.log('--------------');
+  console.log('-----Database Synced---------');
   await seedNurse();
-  console.log('--------------');
+  console.log('------Nurse Seeded--------');
 
   await seedPatient();
-  console.log('--------------');
+  console.log('------Patient Seeded--------');
 
   await seedRoom();
-  console.log('--------------');
+  console.log('-----Room Seeded---------');
 
   await seedScreener();
-  console.log('--------------');
+  console.log('------Screener Seeded--------');
 
   process.exit(0);
 };
