@@ -18,9 +18,11 @@
   },
   "homepage": "https://github.com/tiptondt1998/Doorman#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "hbs": "^4.1.1",
     "log4js": "^6.3.0",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.4.0"
+    "sequelize": "^6.5.0"
   }
 }
