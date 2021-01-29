@@ -3,7 +3,8 @@ const { Patient } = require("../models");
 const patientdata = [
   {
     Name: "test 1",
-    Diagnosis: "test 1",
+    Room: "test 1",
+    
   },
 
   {

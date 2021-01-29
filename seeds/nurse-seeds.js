@@ -3,7 +3,6 @@ const { Nurse } = require("../models");
 const nursedata = [
   {
     Name: "test 1",
-    Email: "test 1",
     Employee_ID: "1",
     Password: "test 1",
   },
