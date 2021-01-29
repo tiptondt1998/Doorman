@@ -1,7 +1,15 @@
-class room{
-    constructor(roomNumber){
-        this.roomNumber = roomNumber;
-     }
-}
+const sequelize = require('../config/connection');
+const { Model, DataTypes } = require('sequelize');
 
-module.exports = room;
+class Room extends Model{
+}
+Room.init(
+        {
+            roomNumber: {
+                type: DataTypes.NUMBER,
+                allowNull: false
+            }    
+            
+        }
+    );
+module.exports = Room;

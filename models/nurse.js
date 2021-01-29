@@ -1,16 +1,23 @@
-class nurse{
-    constructor(username, id, password){
-        this.username = username;
-        this.id = id;
-        this.password = password;
-     }
-    getRole(){
-        return 'nurse'
-    }
+const sequelize = require('../config/connection');
+const { Model, DataTypes } = require('sequelize');
 
-    printNurse(){
-        console.log(`Name: ${nurse.username}, id: ${nurse.id}`);
-    }
+class Nurse extends Model{
 }
-
-module.exports = nurse;
+Nurse.init(
+        {
+            username: {
+                type: DataTypes.STRING, 
+                allowNull: false
+            },
+            employeeId: {
+                type: DataTypes.NUMBER,
+                allowNull: false
+            },
+            password: {
+                type: DataTypes.TEXT,
+                allowNull: false
+            }    
+            
+        }
+    );
+module.exports = Nurse;

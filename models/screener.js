@@ -1,11 +1,23 @@
-class screener{
-    constructor(username, password){
-        this.username = username;
-        this.password = password;
-     }
-    getRole(){
-        return 'screener'
-    }
-}
+const sequelize = require('../config/connection');
+const { Model, DataTypes } = require('sequelize');
 
-module.exports = screener;
+class Screener extends Model{
+}
+Screener.init(
+        {
+            username: {
+                type: DataTypes.STRING, 
+                allowNull: false
+            },
+            employeeId:{
+                type: DataTypes.NUMBER,
+                allowNull: false
+            },
+            password: {
+                type: DataTypes.TEXT,
+                allowNull: false
+            }    
+            
+        }
+    );
+module.exports = Screener;
