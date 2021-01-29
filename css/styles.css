@@ -2,16 +2,44 @@ body{
     background-color: blue;
 }
 
-#login{
+#title{
+    margin-left: 46%;
+    margin-top: 1%;
+}
+
+#title b{
+    font-size: 40px;
+}
+
+#loginForm{
     background-color: white;
+    margin-top: 5%;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
+#submitBtn {
+	box-shadow: 0px 0px 0px 0px #276873;
+	background-color:#599bb3;
+	border-radius:42px;
+	border:6px solid #29668f;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	font-weight:bold;
+	padding:18px 48px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #3d768a;
+    margin-left: 46%;
+ }
 
-#submitBtn{
-    border-color: black;
-    border-width: 2%;
-    padding: 10px 10px 10px 10px;
+.center{
     margin-left: 50%;
-    margin-right: 50%;
 }
 
+.centerField{
+    margin-left: 46%;
+}
