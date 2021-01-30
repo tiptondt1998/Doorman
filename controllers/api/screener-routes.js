@@ -1,7 +1,6 @@
 const router = require('express').Router();
-const sequelize = require('../../config/connection');
 const { Screener } = require('../../models');
-
+const withAuth= require("../../utils/auth");
 
 router.get('/', (req, res) => {
   console.log('======================');
@@ -98,3 +97,5 @@ router.delete('/:id', withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
+
+module.exports = router; 
