@@ -10,6 +10,7 @@ async function loginFormHandler(event) {
       body: JSON.stringify({
         email,
         password,
+        username,
       }),
       headers: { "Content-Type": "application/json" },
     });
