@@ -2,3 +2,7 @@ node_modules/
 .DS_Store
 main
 .env
+DB_NAME = 'Doorman'
+DB_USER = 'root'
+DB_PW= 'mysql pword'
+JAWSDB_URL="youll see this in heroku"
