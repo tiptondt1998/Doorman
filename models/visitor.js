@@ -1,9 +1,8 @@
 const sequelize = require('../config/connection');
 const { Model, DataTypes } = require('sequelize');
 
-
-class Nurse extends Model {}
-Nurse.init(
+class Visitor extends Model {}
+Visitor.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,23 +10,18 @@ Nurse.init(
       primaryKey: true,
       autoIncrement: true
     },
-    username: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    password: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-    employee_id: {
+    phoneNumber: {
       type: DataTypes.NUMBER,
       allowNull: false,
     }
   },
   {
     sequelize,
-    modelName: 'Nurse',
+    modelName: 'Visitor',
   }
 );
-
-module.exports = Nurse;
+module.exports = Visitor;
