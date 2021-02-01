@@ -9,11 +9,8 @@ const seedAll = async () => {
   console.log('-----Database Synced---------');
   await seedNurse();
   console.log('------Nurse Seeded--------');
-
   await seedPatient();
   console.log('------Patient Seeded--------');
-
-
   await seedScreener();
   console.log('------Screener Seeded--------');
 

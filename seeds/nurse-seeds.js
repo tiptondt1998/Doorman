@@ -9,21 +9,18 @@ const nursedata = [
 
   {
     Name: "test 2",
-    Email: "test 2",
     Employee_ID: "2",
     Password: "test 2",
   },
 
   {
     Name: "test 3",
-    Email: "test 3",
     Employee_ID: "3",
     Password: "test 3",
   },
 
   {
     Name: "test 4",
-    Email: "test 4",
     Employee_ID: "4",
     Password: "test 4",
   },
