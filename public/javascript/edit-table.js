@@ -14,4 +14,5 @@ $(function () {
     
     // Evaluate the template with an array of rooms and set the HTML
     // for the people table.
-    $("#rooms").html(tableTemplate({ array: rooms }));
+    $("#rooms").html(tableTemplate({ array: rooms }))
+});
