@@ -1,6 +1,6 @@
 const sequelize = require('../config/connection');
 const room = require('./room');
-const { DataTypes } = require('sequelize/types');
+const { DataTypes } = require('sequelize');
 
 class Patient extends room {}
 Patient.init(
