@@ -20,8 +20,7 @@ Visitor.init(
     }
   },
   {
-    sequelize,
-    modelName: 'Visitor',
+    sequelize
   }
 );
 module.exports = Visitor;
