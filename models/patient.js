@@ -29,8 +29,13 @@ Patient.init(
       allowNull: true,
     },
     finalVisit: {
+<<<<<<< HEAD
+      type: DataTypes.BOOLEAN,
+      allowNull: false
+=======
         type: DataTypes.BOOLEAN,
         allowNull: true
+>>>>>>> 624d982e58e1fc9d8e1b3c7a2c5332d7466ca85f
     },
     patient_id: {
       type: DataTypes.NUMBER,
