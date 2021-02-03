@@ -4,12 +4,14 @@ const { Model, DataTypes } = require('sequelize');
 class Screener extends Model {}
 Screener.init(
   {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
     username: {
       type: DataTypes.STRING,
-      allowNull: false,
-    },
-    employeeId: {
-      type: DataTypes.NUMBER,
       allowNull: false,
     },
     password: {
@@ -18,8 +20,8 @@ Screener.init(
     },
   },
   {
-    sequelize,
-    modelName: 'Screener',
+    sequelize
   }
 );
 module.exports = Screener;
+
