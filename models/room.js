@@ -13,6 +13,7 @@ Room.init(
     roomNumber: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      PrimaryKey: true
     },
     /*  room_id: {
        type: DataTypes.NUMBER,

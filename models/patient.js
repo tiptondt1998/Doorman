@@ -12,7 +12,7 @@ Patient.init(
       autoIncrement: true
     },
     name: {
-      type: DataTypes.STRING,
+      type: DataTypes.VARCHAR(255),
       allowNull: false,
     },
     roomNumber: {
