@@ -1,6 +1,6 @@
 const sequelize = require('../config/connection');
 const room = require('./room');
-const { DataTypes } = require('sequelize/types');
+const { DataTypes } = require('sequelize');
 
 class Patient extends room {}
 Patient.init(
@@ -16,16 +16,21 @@ Patient.init(
       allowNull: false,
     },
     roomNumber: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'room',
+        key: 'roomNumber'
+      }
     },
     covidPositive: {
       type: DataTypes.BOOLEAN,
-      allowNull: false,
+      default: false,
+      allowNull: true,
     },
     finalVisit: {
         type: DataTypes.BOOLEAN,
-        allowNull: false
+        allowNull: true
     },
     patient_id: {
       type: DataTypes.NUMBER,
@@ -33,8 +38,13 @@ Patient.init(
     }
   },
   {
-    sequelize,
-    modelName: 'Patient',
+    
+      sequelize,
+      modelName: 'Patient',
+      timestamp: false,
+      freezeTableName: true,
+      underscored: true
+    
   }
 );
 module.exports = Patient;

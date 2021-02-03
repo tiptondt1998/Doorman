@@ -11,17 +11,17 @@ Room.init(
       autoIncrement: true
     },
     roomNumber: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
-    room_id: {
-      type: DataTypes.NUMBER,
-      allowNull: false
-    }
+    // room_id: {
+    //   type: DataTypes.NUMBER,
+    //   allowNull: false
+    // }
   },
   {
-    sequelize,
-    modelName: 'Room',
+    sequelize
   }
 );
 module.exports = Room;
+
