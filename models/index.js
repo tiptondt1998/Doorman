@@ -11,11 +11,11 @@ Nurse.hasMany(Room, {
     foreignKey: 'employee_id'
 });
 
-Patient.hasMany(Nurse, {
+Patient.hasOne(Nurse, {
     foreignKey: 'patient_id'
 });
 
-Patient.hasMany(Visitor, {
+Patient.hasOne(Visitor, {
     foreignKey: 'patient_id'
 });
 
@@ -31,11 +31,11 @@ Room.belongsTo(Patient, {
     foreignKey: 'patient_id'
 })
 
-Room.hasMany(Nurse, {
+Room.hasOne(Nurse, {
     foreignKey:'room_id'
 });
 
-Room.hasMany(Visitor, {
+Room.hasOne(Visitor, {
     foreignKey: 'room_id'
 });
 
@@ -43,8 +43,8 @@ Visitor.belongsTo(Patient, {
     foreignKey: 'patient_id'
 });
 
-Visitor.belongsTo(Room, {
+/* Visitor.belongsTo(Room, {
     foreignKey: 'room_id'
-});
+}); */
 
 module.exports = { Nurse, Patient, Room, Visitor };

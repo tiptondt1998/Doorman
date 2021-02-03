@@ -16,7 +16,7 @@ Patient.init(
       allowNull: false,
     },
     roomNumber: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     covidPositive: {
@@ -24,8 +24,8 @@ Patient.init(
       allowNull: false,
     },
     finalVisit: {
-        type: DataTypes.BOOLEAN,
-        allowNull: false
+      type: DataTypes.BOOLEAN,
+      allowNull: false
     },
     patient_id: {
       type: DataTypes.NUMBER,
