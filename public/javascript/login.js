@@ -1,3 +1,7 @@
+const log= require('log4js');
+const logger = log.getLogger("logs");
+
+
 async function loginFormHandler(event) {
   event.preventDefault();
 
@@ -20,6 +24,10 @@ async function loginFormHandler(event) {
     } else {
       alert(response.statusText);
     }
+  }
+  else{
+    logger.warn("Failed logon attempt");
+    
   }
 }
 
