@@ -18,27 +18,22 @@ Patient.init(
     roomNumber: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
+      /* references: {
         model: 'room',
         key: 'roomNumber'
-      }
+      } */
     },
     covidPositive: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.TINYINT,
       default: false,
       allowNull: true,
     },
     finalVisit: {
-<<<<<<< HEAD
-      type: DataTypes.BOOLEAN,
-      allowNull: false
-=======
-        type: DataTypes.BOOLEAN,
+        type: DataTypes.TINYINT,
         allowNull: true
->>>>>>> 624d982e58e1fc9d8e1b3c7a2c5332d7466ca85f
     },
     patient_id: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       allowNull: false
     }
   },
