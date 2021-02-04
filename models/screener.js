@@ -20,7 +20,11 @@ Screener.init(
     },
   },
   {
-    sequelize
+    sequelize,
+    modelName: 'Screener',
+    timestamp: false,
+    freezeTableName: true,
+    underscored: true
   }
 );
 module.exports = Screener;

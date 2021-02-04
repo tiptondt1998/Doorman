@@ -2,9 +2,11 @@
   "name": "doorman",
   "version": "1.0.0",
   "description": "* [Github](README.md/#Github)\r * [Description](README.md/#Description)\r * [Installation](README.md/#Installation)\r * [Usage](README.md/#Usage)\r * [License](README.md/#License)\r * [Credits](README.md/#Credits)\r * [Questions](README.md/#Questions)\r ## Github\r https://github.com/tiptondt1998/Doorman\r ## Description\r Application that allows screener to consistently enforce visitor policy\r ## Installation\r  none\r ## Usage\r none\r ## License\r none\r ## Credits\r tiptondt1998 andrewahler jamiedelange jessm91 jbowser82\r ## Questions\r Contact me at: dylan.tipton@live.com",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
     "hbs": "^4.1.1",
     "log4js": "^6.3.0",
     "mysql2": "^2.2.5",
+    "seed": "^0.4.4",
     "sequelize": "^6.5.0"
   },
   "devDependencies": {

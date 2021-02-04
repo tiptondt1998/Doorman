@@ -15,12 +15,16 @@ Visitor.init(
       allowNull: false,
     },
     phoneNumber: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       allowNull: false,
     }
   },
   {
-    sequelize
+    sequelize,
+    modelName: 'Visitor',
+    timestamp: false,
+    freezeTableName: true,
+    underscored: true
   }
 );
 module.exports = Visitor;

@@ -4,25 +4,28 @@ const { Model, DataTypes } = require('sequelize');
 class Room extends Model {}
 Room.init(
   {
-    id: {
+    /* id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
-    },
+    }, */
     roomNumber: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      PrimaryKey: true
+      PrimaryKey: true,
     },
-    // room_id: {
-    //   type: DataTypes.NUMBER,
-    //   allowNull: false
-    // }
+    /*  room_id: {
+       type: DataTypes.NUMBER,
+       allowNull: false
+    } */
   },
   {
-    sequelize
+    sequelize,
+    modelName: 'Room',
+    timestamp: false,
+    freezeTableName: true,
+    underscored: true,
   }
 );
 module.exports = Room;
-

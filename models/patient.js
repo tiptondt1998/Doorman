@@ -12,28 +12,28 @@ Patient.init(
       autoIncrement: true
     },
     name: {
-      type: DataTypes.VARCHAR(255),
+      type: DataTypes.STRING(255),
       allowNull: false,
     },
     roomNumber: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: {
+      /* references: {
         model: 'room',
         key: 'roomNumber'
-      }
+      } */
     },
     covidPositive: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.TINYINT,
       default: false,
       allowNull: true,
     },
     finalVisit: {
-        type: DataTypes.BOOLEAN,
+        type: DataTypes.TINYINT,
         allowNull: true
     },
     patient_id: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       allowNull: false
     }
   },
@@ -48,3 +48,4 @@ Patient.init(
   }
 );
 module.exports = Patient;
+
