@@ -15,10 +15,6 @@ Room.init(
       allowNull: false,
       PrimaryKey: true
     },
-    // room_id: {
-    //   type: DataTypes.NUMBER,
-    //   allowNull: false
-    // }
   },
   {
     sequelize

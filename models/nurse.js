@@ -19,15 +19,6 @@ Nurse.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    // employee_id: {
-    //   type: DataTypes.NUMBER,
-    //   allowNull: false,
-    //   references: {
-    //     model: "screener",
-    //     key: 'id'
-    //   }
-    // },
-
   },
   {
     sequelize,

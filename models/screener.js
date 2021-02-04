@@ -11,7 +11,7 @@ Screener.init(
       autoIncrement: true
     },
     username: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(225),
       allowNull: false,
     },
     password: {
