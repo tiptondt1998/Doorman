@@ -33,7 +33,7 @@ Patient.init(
         allowNull: true
     },
     patient_id: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       allowNull: false
     }
   },
