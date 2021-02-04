@@ -2,3 +2,7 @@ node_modules
 .DS_Store
 main
 .env
+DB_NAME ="pfw0ltdr46khxib3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com"
+DB_USER = "s228t7te6t4j2hgk"
+DB_PW="h6owysekcvmrnfy3"
+JAWSDB_URL="mysql://s228t7te6t4j2hgk:h6owysekcvmrnfy3@pfw0ltdr46khxib3.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/iz7o9witnw454563"
