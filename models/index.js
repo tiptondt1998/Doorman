@@ -2,6 +2,7 @@ const Nurse = require('./nurse');
 const Patient = require('./patient');
 const Room = require('./room');
 const Visitor = require('./visitor')
+const Screener = require("./screener");
 
 // Nurse.hasMany(Patient, {
 //     foreignKey: 'employee_id'
@@ -47,4 +48,4 @@ const Visitor = require('./visitor')
 //     foreignKey: 'room_id'
 // });
 
-module.exports = { Nurse, Patient, Room, Visitor };
+module.exports = { Nurse, Patient, Room, Visitor, Screener };
