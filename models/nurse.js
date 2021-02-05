@@ -12,7 +12,7 @@ Nurse.init(
       autoIncrement: true
     },
     username: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(255),
       allowNull: false,
     },
     password: {

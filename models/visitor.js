@@ -20,7 +20,11 @@ Visitor.init(
     }
   },
   {
-    sequelize
+    sequelize,
+    modelName: 'Visitor',
+    timestamp: false,
+    freezeTableName: true,
+    underscored: true
   }
 );
 module.exports = Visitor;
