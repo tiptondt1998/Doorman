@@ -27,6 +27,10 @@ Nurse.init(
     //     key: 'id'
     //   }
     // },
+    /* login: {
+      username: "test 1",
+      Password: "test 1"
+    } */
 
   },
   {
