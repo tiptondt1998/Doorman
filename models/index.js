@@ -11,6 +11,7 @@ const Visitor = require('./visitor')
 //     foreignKey: 'employee_id'
 // });
 
+
 // Patient.hasMany(Nurse, {
 //     foreignKey: 'patient_id'
 // });
@@ -18,6 +19,7 @@ const Visitor = require('./visitor')
 //Patient.hasOne(Visitor, {
   //  foreignKey: 'patient_id'
 //});
+
 // Patient.hasOne(Nurse, {
 //     foreignKey: 'patient_id'
 // });
@@ -45,6 +47,7 @@ const Visitor = require('./visitor')
 //Room.hasOne(Visitor, {
 //    foreignKey: 'room_id'
 // });
+
 // Room.hasOne(Patient, {
 //     foreignKey: 'patient_id'
 // })
@@ -61,9 +64,11 @@ const Visitor = require('./visitor')
 //     foreignKey: 'patient_id'
 // });
 
+
 /* Visitor.belongsTo(Room, {
     foreignKey: 'room_id'
 }); */
+
 // Visitor.belongsTo(Room, {
 //     foreignKey: 'room_id'
 // });

@@ -8,6 +8,7 @@ const logger = log.getLogger("logs");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+
 const sequelize = require("./config/connection");
 
 
@@ -26,4 +27,5 @@ app.use(require('./controllers/'));
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
+  logger.trace(`Doorman now listening on Port ${PORT}`)
 });
