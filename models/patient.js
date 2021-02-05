@@ -18,10 +18,6 @@ Patient.init(
     roomNumber: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      /* references: {
-        model: 'room',
-        key: 'roomNumber'
-      } */
     },
     covidPositive: {
       type: DataTypes.TINYINT,
