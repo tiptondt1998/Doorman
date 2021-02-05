@@ -2,23 +2,27 @@ const { Nurse } = require("../models");
 
 const nursedata = [
   {
-    Name: "test 1",
-    Password: "test 1",
+    username: "test 1",
+    password: "test",
+    id: 1,
   },
 
   {
-    Name: "test 2",
-    Password: "test 2",
+    username: "test 2",
+    password: "test",
+    id: 2,
   },
 
   {
-    Name: "test 3",
-    Password: "test 3",
+    username: "test 3",
+    password: "test",
+    id: 3,
   },
 
   {
-    Name: "test 4",
-    Password: "test 4",
+    username: "test 4",
+    password: "test",
+    id: 4,
   },
 ];
 const seedNurse = () => Nurse.bulkCreate(nursedata);
