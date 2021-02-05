@@ -1,26 +1,27 @@
 const sequelize = require('../config/connection');
 const { Model, DataTypes } = require('sequelize');
 
-class Screener extends Model {}
-Screener.init(
+class Room extends Model {}
+Room.init(
   {
-    id: {
+    /* id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
-    },
-    username: {
-      type: DataTypes.STRING,
+    }, */
+    roomNumber: {
+      type: DataTypes.INTEGER,
       allowNull: false,
+      PrimaryKey: true
     },
-    password: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
+    /*  room_id: {
+       type: DataTypes.NUMBER,
+       allowNull: false
+    } */
   },
   {
     sequelize
   }
 );
-module.exports = Screener;
+module.exports = Room;

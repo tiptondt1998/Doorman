@@ -3,7 +3,7 @@ const apiRoutes = require('./api');
 
 router.use('/api', apiRoutes);
 
-router.use((_req, res) => {
+router.use((req, res) => {
     res.send("<h1>Incorrect</h1>")
   });
   

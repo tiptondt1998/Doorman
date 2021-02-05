@@ -1,8 +1,8 @@
 const sequelize = require('../config/connection');
 const { Model, DataTypes } = require('sequelize');
 
-class Screener extends Model {}
-Screener.init(
+class Visitor extends Model {}
+Visitor.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -10,17 +10,17 @@ Screener.init(
       primaryKey: true,
       autoIncrement: true
     },
-    username: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    password: {
-      type: DataTypes.TEXT,
+    phoneNumber: {
+      type: DataTypes.INTEGER,
       allowNull: false,
-    },
+    }
   },
   {
     sequelize
   }
 );
-module.exports = Screener;
+module.exports = Visitor;

@@ -22,6 +22,6 @@ const patientdata = [
     Room: "test 4",
   },
 ];
-const seedPatient = () => Nurse.bulkCreate(patientdata);
+const seedPatient = () => Patient.bulkCreate(patientdata);
 
 module.exports = seedPatient;
