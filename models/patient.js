@@ -1,8 +1,8 @@
 const sequelize = require('../config/connection');
 const room = require('./room');
-const { DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize')
 
-class Patient extends room {}
+class Patient extends Model {}
 Patient.init(
   {
     id: {
@@ -29,7 +29,11 @@ Patient.init(
       allowNull: true,
     },
     finalVisit: {
+
+        type: DataTypes.BOOLEAN,
+
         type: DataTypes.TINYINT,
+
         allowNull: true
     },
     patient_id: {

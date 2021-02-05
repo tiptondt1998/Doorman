@@ -11,7 +11,7 @@ Screener.init(
       autoIncrement: true
     },
     username: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(225),
       allowNull: false,
     },
     password: {
@@ -20,7 +20,11 @@ Screener.init(
     },
   },
   {
-    sequelize
+    sequelize,
+    modelName: 'Screener',
+    timestamp: false,
+    freezeTableName: true,
+    underscored: true
   }
 );
 module.exports = Screener;
