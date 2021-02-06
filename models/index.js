@@ -73,4 +73,4 @@ const Visitor = require('./visitor')
 //     foreignKey: 'room_id'
 // });
 
-// module.exports = { Nurse, Patient, Room, Visitor };
+module.exports = { Nurse, Patient, Room, Visitor };

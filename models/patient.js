@@ -1,6 +1,6 @@
 const sequelize = require('../config/connection');
 const room = require('./room');
-const { Model, DataTypes } = require('sequelize')
+const { Model, DataTypes } = require('sequelize');
 
 class Patient extends Model {}
 Patient.init(
@@ -9,7 +9,7 @@ Patient.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     name: {
       type: DataTypes.STRING(255),
@@ -29,26 +29,20 @@ Patient.init(
       allowNull: true,
     },
     finalVisit: {
-
-        type: DataTypes.BOOLEAN,
-
-        type: DataTypes.TINYINT,
-
-        allowNull: true
+      type: DataTypes.TINYINT,
+      allowNull: true,
     },
     patient_id: {
       type: DataTypes.INTEGER,
-      allowNull: false
-    }
+      allowNull: false,
+    },
   },
   {
-    
-      sequelize,
-      modelName: 'Patient',
-      timestamp: false,
-      freezeTableName: true,
-      underscored: true
-    
+    sequelize,
+    modelName: 'Patient',
+    timestamp: false,
+    freezeTableName: true,
+    underscored: true,
   }
 );
 module.exports = Patient;
