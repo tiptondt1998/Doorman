@@ -5,20 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Doorman</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/stylesheets/styles.css">
 </head>
 
 <body>
   <div class="wrapper">
     <header>
-      <h1>
-        <a href="/">Doorman</a>
+      <h1 id="heading-bg">
+        <a id="heading" href="/">Doorman</a>
       </h1>
       <nav>
         {{#if loggedIn}}
+
         <button id="logout">logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a id="login" href="/login">Login</a>
         {{/if}}
       </nav>
     </header>
@@ -26,7 +27,9 @@
       {{{ body }}}
     </main>
     <footer>
+
     Created by : Dylan Tipton, Jessica Mangiameli, Jamie de Lange , Andrew Ahler
+
     </footer>
   </div>
   

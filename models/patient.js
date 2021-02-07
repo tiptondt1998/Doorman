@@ -15,6 +15,7 @@ Patient.init(
     },
     covidPositive: {
       type: DataTypes.STRING(255),
+
       default: false,
       allowNull: true,
     },

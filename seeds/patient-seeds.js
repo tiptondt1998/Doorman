@@ -6,7 +6,6 @@ const patientdata = [
     roomNumber: 1,
     finalVisit: "test",
     covidPositive: "test"
-
   },
 
   {

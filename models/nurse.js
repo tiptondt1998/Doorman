@@ -1,9 +1,9 @@
 const sequelize = require('../config/connection');
 const { Model, DataTypes } = require('sequelize');
 
-
 class Nurse extends Model {
 }
+
 Nurse.init(
   {
     id: {
