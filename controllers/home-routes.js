@@ -3,10 +3,26 @@ const sequelize = require('../config/connection');
 const { Nurse, Patient, Room, Visitor } = require('../models');
 
 router.get('/', (req, res) => {
-   res.render('homepage', {
-       loggedIn: req.session.loggedIn,
-       body: 'a'
-   });
+    Patient.findAll({
+        attributes: [
+            'name',
+            'roomNumber',
+            'patient_id',
+            'covidPositive',
+            'finalVisit'
+        ]
+    })
+    .then(dbPatientData => {
+        const patients = dbPatientData.map(patient => patient.get({ plain: true }));
+        res.render('homepage', {
+            patients,
+            loggedIn: req.session.loggedIn
+        });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
 });
 
 router.get('/login', (req, res) => {
