@@ -11,7 +11,7 @@ Screener.init(
       autoIncrement: true
     },
     username: {
-      type: DataTypes.STRING(225),
+      type: DataTypes.STRING(255),
       allowNull: false,
     },
     password: {
@@ -28,4 +28,3 @@ Screener.init(
   }
 );
 module.exports = Screener;
-

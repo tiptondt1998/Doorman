@@ -1,4 +1,4 @@
-<table class="room-list">
+{{!-- <table class="room-list">
     <thead>
         <tr>
             <th>Room #</th>
@@ -17,20 +17,22 @@
         {{ finalvisit }}
     </tr>
 </tbody>
-</table>
+</table> --}}
 
-<!-- Not sure if it should be more like this:
+
 
 <table>
 <thead>
   <tr>
-    {{#each array.[0]}}
-      <th>{{@key}}</th>
-    {{/each}}
+            <th>Room #</th>
+            <th>Patient Name</th>
+            <th>Visitor Name and Phone #</th>
+            <th>Covid Positive [Y/N]</th>
+            <th>Final Visit [Y/N]</th>
   </tr>
 </thead>
 <tbody>
-  {{#each array}}
+  {{#each patients}}
     <tr>
     	{{#each this}}
         <td>{{this}}</td>
@@ -40,5 +42,3 @@
 </tbody>
 </table>
 </script>
-
--->

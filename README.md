@@ -18,6 +18,6 @@ none
 ## License
 none
 ## Credits
-tiptondt1998 andrewahler jamiedelange jessm91 jbowser82
+tiptondt1998 andrewahler jamiedelange jessm91
 ## Questions
 Contact me at: dylan.tipton@live.com

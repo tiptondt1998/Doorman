@@ -2,27 +2,33 @@ const { Patient } = require("../models");
 
 const patientdata = [
   {
-    Name: "test 1",
-    Room: 1,
-
+    name: "test 1",
+    roomNumber: 1,
+    finalVisit: "test",
+    covidPositive: "test"
   },
 
   {
-    Name: "test 2",
-    Room: 2,
+    name: "test 2",
+    roomNumber: 2,
+    finalVisit: "test",
+    covidPositive: "test"
   },
 
   {
-    Name: "test 3",
-    Room: 3,
+    name: "test 3",
+    roomNumber: 3,
+    finalVisit: "test",
+    covidPositive: "test"
   },
 
   {
-    Name: "test 4",
-    Room: 4,
+    name: "test 4",
+    roomNumber: 4,
+    finalVisit: "test",
+    covidPositive: "test"
   },
 ];
-const seedPatient = () => Nurse.bulkCreate(patientdata);
+const seedPatient = () => Patient.bulkCreate(patientdata);
 
 module.exports = seedPatient;
-
