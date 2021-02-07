@@ -5,12 +5,6 @@ const { Model, DataTypes } = require('sequelize');
 class Patient extends Model {}
 Patient.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     name: {
       type: DataTypes.STRING(255),
       allowNull: false,
@@ -18,32 +12,26 @@ Patient.init(
     roomNumber: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      /* references: {
-        model: 'room',
-        key: 'roomNumber'
-      } */
     },
     covidPositive: {
-      type: DataTypes.TINYINT,
+      type: DataTypes.STRING(255),
+
       default: false,
       allowNull: true,
     },
     finalVisit: {
-      type: DataTypes.TINYINT,
-      allowNull: true,
-    },
-    patient_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
+        type: DataTypes.TEXT,
+        allowNull: true
     },
   },
   {
-    sequelize,
-    modelName: 'Patient',
-    timestamp: false,
-    freezeTableName: true,
-    underscored: true,
+    
+      sequelize,
+      modelName: 'Patient',
+      timestamp: false,
+      freezeTableName: true,
+      underscored: true
+    
   }
 );
-
 module.exports = Patient;

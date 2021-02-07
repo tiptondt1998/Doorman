@@ -2,6 +2,8 @@ const sequelize = require('../config/connection');
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcryptjs');
 
+class Nurse extends Model {
+}
 
 module.exports = function(sequelize, DataTypes) {
   // class Nurse extends Model {}}
@@ -19,22 +21,8 @@ const nurse = sequelize.define("Nurse", {
     password: {
       type: DataTypes.TEXT,
       allowNull: false,
-    }
-    // employee_id: {
-    //   type: DataTypes.NUMBER,
-    //   allowNull: false,
-    //   references: {
-    //     model: "screener",
-    //     key: 'id'
-    //   }
-    // },
-    /* login: {
-      username: "test 1",
-      Password: "test 1"
-    } */
-
-  
-},
+    },
+  },
   {
     sequelize,
     modelName: 'Nurse',

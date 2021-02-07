@@ -4,33 +4,29 @@ const patientdata = [
   {
     name: "test 1",
     roomNumber: 1,
-    patient_id: 1,
-    covidPositive: 0,
-    finalVisit: 0
+    finalVisit: "test",
+    covidPositive: "test"
   },
 
   {
     name: "test 2",
     roomNumber: 2,
-    patient_id: 2,
-    covidPositive: 0,
-    finalVisit: 0
+    finalVisit: "test",
+    covidPositive: "test"
   },
 
   {
     name: "test 3",
     roomNumber: 3,
-    patient_id: 3,
-    covidPositive: 0,
-    finalVisit: 0
+    finalVisit: "test",
+    covidPositive: "test"
   },
 
   {
     name: "test 4",
     roomNumber: 4,
-    patient_id: 4,
-    covidPositive: 0,
-    finalVisit: 0
+    finalVisit: "test",
+    covidPositive: "test"
   },
 ];
 const seedPatient = () => Patient.bulkCreate(patientdata);
