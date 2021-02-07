@@ -6,13 +6,13 @@ router.get('/', (req, res) => {
   console.log('======================');
   Patient.findAll({
     attributes: [
-      'Name',
-      'Room',
+      'name',
+      'room',
     ],
     include: [
       {
         model: Patient,
-        attributes: ['Name', 'Room'],
+        attributes: ['name', 'room'],
       },
     ]
   })
@@ -29,13 +29,13 @@ router.get('/:id', (req, res) => {
       id: req.params.id
     },
     attributes: [
-      'Name',
-      'Room',
+      'name',
+      'room',
     ],
     include: [
       {
         model: Patient ,
-        attributes: ['Name', 'Room'],
+        attributes: ['name', 'room'],
       },
     ]
   })

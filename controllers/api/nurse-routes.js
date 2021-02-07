@@ -6,8 +6,8 @@ router.get('/', (req, res) => {
   console.log('======================');
   Nurse.findAll({
     attributes: [
-      'Name',
-      'Password',
+      'name',
+      'password',
     ],
     include: [
       {
