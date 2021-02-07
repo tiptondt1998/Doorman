@@ -28,4 +28,3 @@ Screener.init(
   }
 );
 module.exports = Screener;
-

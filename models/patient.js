@@ -45,4 +45,5 @@ Patient.init(
     underscored: true,
   }
 );
+
 module.exports = Patient;
