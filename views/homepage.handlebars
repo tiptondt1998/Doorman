@@ -35,10 +35,18 @@
   {{#each patients}}
     <tr>
     	{{#each this}}
-        <td>{{this}}</td>
+        <td class="tableField">{{this}}</td>
       {{/each}}
     </tr>
   {{/each}}
 </tbody>
 </table>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  var text = $(this).text().trim();
+
+  $(".tableField").on("click", "p", function() {
+    var textInput = $("<textarea>").addClass("form-control").val(text);
+      $(this).replaceWith(textInput);
+      textInput.trigger("focus");
+  });
 </script>

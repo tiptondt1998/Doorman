@@ -4,6 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const log= require('log4js');
 const logger = log.getLogger("logs");
+const cookieParser = require('cookie-parser');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -23,7 +24,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
   secret: 'Very secret secret',
-  cookie: {},
+  //cookie: {},
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -37,6 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session(sess));
 
 app.use(require('./controllers/'));
+app.use(cookieParser());
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
