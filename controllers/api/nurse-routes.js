@@ -8,12 +8,11 @@ router.get('/', (req, res) => {
     attributes: [
       'Name',
       'Password',
-      'Employee_ID',
     ],
     include: [
       {
         model: Nurse,
-        attributes: ['Name', 'Password', 'Employee_ID'],
+        attributes: ['Name', 'Password'],
       },
     ]
   })
@@ -32,12 +31,11 @@ router.get('/:id', (req, res) => {
     attributes: [
       'Name',
       'Password',
-      'Employee_ID',
     ],
     include: [
       {
         model: Nurse ,
-        attributes: ['Name', 'Password', 'Employee_ID',],
+        attributes: ['Name', 'Password'],
       },
     ]
   })
