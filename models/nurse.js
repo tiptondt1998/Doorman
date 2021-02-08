@@ -40,4 +40,4 @@ const nurse = sequelize.define("Nurse", {
   return nurse;
 };
 
-// module.exports = Nurse;
+module.exports = Nurse;

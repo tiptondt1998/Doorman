@@ -6,7 +6,7 @@ router.use('/api', apiRoutes);
 router.use('/', homeRoutes);
 
 router.use((req, res) => {
-    res.send("<h1>Incorrect</h1>")
-  });
+  res.status(404).end();
+});
   
-  module.exports = router;
+module.exports = router;
