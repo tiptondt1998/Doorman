@@ -14,6 +14,7 @@ router.get('/', (req, res) => {
     })
     .then(dbPatientData => {
         const patients = dbPatientData.map(patient => patient.get({ plain: true }));
+        console.log('/');
         console.log(req.session.loggedIn);
         res.render('homepage', {
             patients,
@@ -46,6 +47,7 @@ router.post('/login', (req, res) => {
             username: req.body.username
         }
     }).then(dbNurseData => {
+        console.log('/login');
         if (!dbNurseData) {
             res.status(400).json({ message: 'No user account found!' });
             return;
@@ -78,6 +80,7 @@ router.post('/logout', (req, res) => {
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
+        console.log('/login');
         res.redirect('/');
         return;
     }
