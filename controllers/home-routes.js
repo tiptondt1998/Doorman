@@ -14,6 +14,7 @@ router.get('/', (req, res) => {
     })
     .then(dbPatientData => {
         const patients = dbPatientData.map(patient => patient.get({ plain: true }));
+        console.log(req.session.loggedIn);
         res.render('homepage', {
             patients,
             loggedIn: req.session.loggedIn
