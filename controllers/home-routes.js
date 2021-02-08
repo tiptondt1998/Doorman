@@ -2,7 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Nurse, Patient, Room, Visitor } = require('../models');
 
-/* router.get('/', (req, res) => {
+router.get('/', (req, res) => {
     Patient.findAll({
         attributes: [
             'name',
@@ -25,7 +25,7 @@ const { Nurse, Patient, Room, Visitor } = require('../models');
     });
 });
 
-// GET /api/users
+/* // GET /api/users
 router.get('/', (req, res) => {
     Nurse.findAll({
         attributes: { exclude: ['password'] }
@@ -36,6 +36,8 @@ router.get('/', (req, res) => {
             res.status(500).json(err);
         });
 }); */
+
+
 
 router.post('/login', (req, res) => {
     Nurse.findOne({

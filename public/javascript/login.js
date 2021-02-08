@@ -1,5 +1,5 @@
-import log4js from "log4js"
-const logger = log4js.getLogger("logs");
+/* import log4js from "log4js"
+const logger = log4js.getLogger("logs"); */
 
 
 const loginFormHandler = async function(event) {
@@ -7,7 +7,7 @@ const loginFormHandler = async function(event) {
 
   const usernameEl = document.querySelector("#username-login").value.trim();
   const passwordEl = document.querySelector("#password-login").value.trim();
-  fetch("/api/nurse/login", {
+  fetch("/api/login", {
     method: "post",
     body: JSON.stringify({
       username: usernameEl.value,
@@ -47,9 +47,9 @@ async function signupFormHandler(event) {
 }
 
 document
-  .querySelector(".login-form")
+  .querySelector("#login-form")
   .addEventListener("submit", loginFormHandler);
 
-document
+/* document
   .querySelector(".signup-form")
-  .addEventListener("submit", signupFormHandler);
+  .addEventListener("submit", signupFormHandler); */
