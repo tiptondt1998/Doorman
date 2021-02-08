@@ -2,7 +2,7 @@ const router = require('express').Router();
 const sequelize = require('../config/connection');
 const { Nurse, Patient, Room, Visitor } = require('../models');
 
-router.get('/', (req, res) => {
+/* router.get('/', (req, res) => {
     Patient.findAll({
         attributes: [
             'name',
@@ -35,7 +35,7 @@ router.get('/', (req, res) => {
             console.log(err);
             res.status(500).json(err);
         });
-});
+}); */
 
 router.post('/login', (req, res) => {
     Nurse.findOne({
@@ -73,13 +73,13 @@ router.post('/logout', (req, res) => {
     }
 });
 
-/* router.get('/login', (req, res) => {
+router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
         return;
     }
 
     res.render('login');
-}); */
+});
 
 module.exports = router;

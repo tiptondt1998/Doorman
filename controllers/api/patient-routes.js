@@ -6,8 +6,11 @@ router.get('/', (req, res) => {
   console.log('======================');
   Patient.findAll({
     attributes: [
-      'Name',
-      'Room',
+      'name',
+      'roomNumber',
+      'patient_id',
+      'covidPositive',
+      'finalVisit'
     ],
     include: [
       {
@@ -29,8 +32,11 @@ router.get('/:id', (req, res) => {
       id: req.params.id
     },
     attributes: [
-      'Name',
-      'Room',
+      'name',
+      'roomNumber',
+      'patient_id',
+      'covidPositive',
+      'finalVisit'
     ],
     include: [
       {
