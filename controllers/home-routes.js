@@ -40,8 +40,6 @@ router.get('/', (req, res) => {
         });
 }); */
 
-
-
 router.post('/login', (req, res) => {
     console.log('/login');
     Nurse.findOne({
@@ -66,6 +64,16 @@ router.post('/login', (req, res) => {
             res.json({ user: dbNurseData, message: 'You are now logged in!' });
         });
     });
+});
+
+router.get('/login', (req, res) => {
+    console.log('/login');
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+
+    res.render('login');
 });
 
 router.post('/logout', (req, res) => {
