@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 const { Nurse, Patient, Room, Visitor } = require('../models');
 
 router.get('/', (req, res) => {
+    console.log('/');
     Patient.findAll({
         attributes: [
             'name',
@@ -14,7 +15,6 @@ router.get('/', (req, res) => {
     })
     .then(dbPatientData => {
         const patients = dbPatientData.map(patient => patient.get({ plain: true }));
-        console.log('/');
         console.log(req.session.loggedIn);
         res.render('homepage', {
             patients,
@@ -42,12 +42,12 @@ router.get('/', (req, res) => {
 
 
 router.post('/login', (req, res) => {
+    console.log('/login');
     Nurse.findOne({
         where: {
             username: req.body.username
         }
     }).then(dbNurseData => {
-        console.log('/login');
         if (!dbNurseData) {
             res.status(400).json({ message: 'No user account found!' });
             return;
@@ -79,8 +79,8 @@ router.post('/logout', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
+    console.log('/login');
     if (req.session.loggedIn) {
-        console.log('/login');
         res.redirect('/');
         return;
     }
