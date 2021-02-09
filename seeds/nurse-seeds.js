@@ -20,7 +20,6 @@ const nursedata = [
     username: "test 4",
     password: "test",
     id: 4,
-
   },
 ];
 const seedNurse = () => Nurse.bulkCreate(nursedata);

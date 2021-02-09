@@ -41,21 +41,24 @@ router.get('/', (req, res) => {
 }); */
 
 router.post('/login', (req, res) => {
-    const i = req.body.username 
-    console.log(i);
+    const username = req.body.username 
+    console.log(req.body);
     Nurse.findOne({ where: { username: username } }).then(dbNurseData => {
-    if (!dbNurseData) {
-        res.redirect('/login');
-    } else if (!dbNurseData.validPassword(req.body.password)) {
-        res.redirect('/login');
-    } else {
-        req.session.save(() => {
-        req.session.username = dbNurseData.username;
-        req.session.loggedIn = true;
-        res.json({ user: dbNurseData, message: 'You are now logged in!' });
-        });
-        res.redirect('/');
-    }
+        if (!dbNurseData) {
+            console.log('1');
+            res.redirect('/login');
+        } else if (!dbNurseData.validPassword(req.body.password)) {
+            console.log(dbNurseData);
+            res.redirect('/login');
+        } else {
+            console.log('3');
+            req.session.save(() => {
+            req.session.username = dbNurseData.username;
+            req.session.loggedIn = true;
+            res.json({ user: dbNurseData, message: 'You are now logged in!' });
+            });
+            res.redirect('/');
+        }
     });
 });
 
@@ -64,7 +67,6 @@ router.get('/login', (req, res) => {
         res.redirect('/');
         return;
     }
-
     res.render('login');
 });
 
