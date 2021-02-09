@@ -41,20 +41,22 @@ router.get('/', (req, res) => {
 }); */
 
 router.post('/login', (req, res) => {
-Nurse.findOne({ where: { username: username } }).then(dbNurseData => {
-  if (!dbNurseData) {
-    res.redirect('/login');
-  } else if (!dbNurseData.validPassword(req.body.password)) {
-    res.redirect('/login');
-  } else {
-     req.session.save(() => {
-       req.session.username = dbNurseData.username;
-       req.session.loggedIn = true;
-       res.json({ user: dbNurseData, message: 'You are now logged in!' });
-     });
-     res.redirect('/');
-  }
-});
+    const i = req.body.username 
+    console.log(i);
+    Nurse.findOne({ where: { username: username } }).then(dbNurseData => {
+    if (!dbNurseData) {
+        res.redirect('/login');
+    } else if (!dbNurseData.validPassword(req.body.password)) {
+        res.redirect('/login');
+    } else {
+        req.session.save(() => {
+        req.session.username = dbNurseData.username;
+        req.session.loggedIn = true;
+        res.json({ user: dbNurseData, message: 'You are now logged in!' });
+        });
+        res.redirect('/');
+    }
+    });
 });
 
 router.get('/login', (req, res) => {

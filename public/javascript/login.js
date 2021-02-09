@@ -21,7 +21,7 @@ const loginFormHandler = async function(event) {
   .catch(err => console.log(err));
 }
 
-async function signupFormHandler(event) {
+/* async function signupFormHandler(event) {
   event.preventDefault();
 
   const username = document.querySelector("#username-signup").value.trim();
@@ -44,7 +44,7 @@ async function signupFormHandler(event) {
       alert(response.statusText);
     }
   }
-}
+} */
 
 document
   .querySelector("#login-form")
