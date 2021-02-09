@@ -22,5 +22,6 @@ const nursedata = [
     id: 4,
   },
 ];
-const seedNurse = () => Nurse.bulkCreate(nursedata);
+const seedNurse = () => Nurse.bulkCreate(nursedata, {individualHooks: true});
+
 module.exports = seedNurse;
