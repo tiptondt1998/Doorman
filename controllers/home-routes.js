@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Nurse, Patient, Room, Visitor } = require('../models');
+const { Nurse, Patient } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
@@ -41,33 +41,23 @@ router.get('/', (req, res) => {
 }); */
 
 router.post('/login', (req, res) => {
-    console.log('/login');
-    Nurse.findOne({
-        where: {
-            username: req.body.username
-        }
-    }).then(dbNurseData => {
-        if (!dbNurseData) {
-            res.status(400).json({ message: 'No user account found!' });
-            return;
-        }
-
-        const validPassword = dbNurseData.checkPassword(req.body.password);
-        if (!validPassword) {
-            res.status(400).json({ message: 'Incorrect password!' });
-            return;
-        }
-
-        req.session.save(() => {
-            req.session.username = dbNurseData.username;
-            req.session.loggedIn = true;
-            res.json({ user: dbNurseData, message: 'You are now logged in!' });
-        });
-    });
+Nurse.findOne({ where: { username: username } }).then(dbNurseData => {
+  if (!dbNurseData) {
+    res.redirect('/login');
+  } else if (!dbNurseData.validPassword(req.body.password)) {
+    res.redirect('/login');
+  } else {
+     req.session.save(() => {
+       req.session.username = dbNurseData.username;
+       req.session.loggedIn = true;
+       res.json({ user: dbNurseData, message: 'You are now logged in!' });
+     });
+     res.redirect('/');
+  }
+});
 });
 
 router.get('/login', (req, res) => {
-    console.log('/login');
     if (req.session.loggedIn) {
         res.redirect('/');
         return;
