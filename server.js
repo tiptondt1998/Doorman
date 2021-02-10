@@ -24,7 +24,6 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
   secret: 'Very secret secret',
-  //cookie: {},
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({

@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Patient, Visitor } = require('../models');
+const { Nurse, Patient, Visitor } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
@@ -11,16 +11,16 @@ router.get('/', withAuth, (req, res) => {
             'covidPositive',
             'finalVisit'
         ],
-        include: [
-            {
-                model: Visitor,
-                attributes: ['name', 'phoneNumber']
-            }
-        ]
+        include: {
+            model: Visitor,
+            attributes: ['name', 'phoneNumber']
+        }
     })
     .then(dbPatientData => {
+        console.log(dbPatientData[0])
         const patients = dbPatientData.map(patient => patient.get({ plain: true }));
         console.log(req.session.loggedIn);
+        console.log(patients[0])
         res.render('homepage', {
             patients,
             loggedIn: req.session.loggedIn
@@ -63,7 +63,6 @@ router.post('/login', (req, res) => {
             req.session.loggedIn = true;
             res.json({ user: dbNurseData, message: 'You are now logged in!' });
             });
-            //res.redirect('/');
         }
     });
 });
