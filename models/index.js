@@ -1,11 +1,9 @@
-const Nurse = require('./nurse');
 const Patient = require('./patient');
-const Room = require('./room');
 const Visitor = require('./visitor')
-const Screener = require("./screener");
 
-Visitor.belongsTo(Patient, {
+Patient.hasOne(Visitor, {
     foreignKey: 'roomNumber'
 });
+Visitor.belongsTo(Patient);
 
-module.exports = { Nurse, Patient, Room, Visitor, Screener };
+module.exports = { Patient, Visitor };

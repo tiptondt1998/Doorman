@@ -1,15 +1,13 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Nurse, Patient, Visitor } = require('../models');
+const { Patient, Visitor } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
-    console.log('/');
     Patient.findAll({
         attributes: [
             'roomNumber',
             'name',
-            /* 'patient_id', */
             'covidPositive',
             'finalVisit'
         ],

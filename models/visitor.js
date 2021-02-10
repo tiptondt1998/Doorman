@@ -28,4 +28,5 @@ Visitor.init(
     sequelize
   }
 );
+
 module.exports = Visitor;
