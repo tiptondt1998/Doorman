@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../config/connection');
-const { Nurse, Patient } = require('../models');
+const { Nurse, Patient, Visitor } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
@@ -12,6 +12,12 @@ router.get('/', withAuth, (req, res) => {
             /* 'patient_id', */
             'covidPositive',
             'finalVisit'
+        ],
+        include: [
+            {
+                model: Visitor,
+                attributes: ['name', 'phoneNumber']
+            }
         ]
     })
     .then(dbPatientData => {

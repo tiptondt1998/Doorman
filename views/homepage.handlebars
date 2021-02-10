@@ -1,33 +1,10 @@
-{{!-- <table class="room-list">
-    <thead>
-        <tr>
-            <th>Room #</th>
-            <th>Patient Name</th>
-            <th>Visitor Name and Phone #</th>
-            <th>Covid Positive [Y/N]</th>
-            <th>Final Visit [Y/N]</th>
-        </tr>
-    </thead>
-<tbody>
-    <tr>
-        {{ room }}
-        {{ patient }}
-        {{ visitor }}
-        {{ covid }}
-        {{ finalvisit }}
-    </tr>
-</tbody>
-</table> --}}
-
-
-
 <table>
 <thead>
   <tr>
             <th>Room #</th>
             <th>Patient Name</th>
             <th>Visitor Name and Phone #</th>
-            <th>Covid Positive [Y/N]</th>
+            <th>COVID Positive [Y/N]</th>
             <th>Final Visit [Y/N]</th>
   </tr>
 </thead>
@@ -41,12 +18,3 @@
   {{/each}}
 </tbody>
 </table>
-{{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-  var text = $(this).text().trim();
-
-  $(".tableField").on("click", "p", function() {
-    var textInput = $("<textarea>").addClass("form-control").val(text);
-      $(this).replaceWith(textInput);
-      textInput.trigger("focus");
-  });
-</script> --}}
