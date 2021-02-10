@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     attributes: [
       'name',
       'roomNumber',
-      'patient_id',
+      /* 'patient_id', */
       'covidPositive',
       'finalVisit'
     ],
@@ -34,7 +34,7 @@ router.get('/:id', (req, res) => {
     attributes: [
       'name',
       'roomNumber',
-      'patient_id',
+      /* 'patient_id', */
       'covidPositive',
       'finalVisit'
     ],

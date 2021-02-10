@@ -7,9 +7,9 @@ router.get('/', withAuth, (req, res) => {
     console.log('/');
     Patient.findAll({
         attributes: [
-            'name',
             'roomNumber',
-            'patient_id',
+            'name',
+            /* 'patient_id', */
             'covidPositive',
             'finalVisit'
         ]
@@ -42,7 +42,7 @@ router.get('/', (req, res) => {
 
 router.post('/login', (req, res) => {
     const username = req.body.username 
-    console.log(req.body);
+    console.log(req.body.password);
     Nurse.findOne({ where: { username: username } }).then(dbNurseData => {
         if (!dbNurseData) {
             console.log('1');
@@ -50,6 +50,8 @@ router.post('/login', (req, res) => {
         } else if (!dbNurseData.validPassword(req.body.password)) {
             console.log(dbNurseData);
             res.redirect('/login');
+            res.status(400).json({ message: 'Incorrect password!' });
+            return;
         } else {
             console.log('3');
             req.session.save(() => {
@@ -57,7 +59,7 @@ router.post('/login', (req, res) => {
             req.session.loggedIn = true;
             res.json({ user: dbNurseData, message: 'You are now logged in!' });
             });
-            res.redirect('/');
+            //res.redirect('/');
         }
     });
 });
@@ -72,7 +74,7 @@ router.get('/login', (req, res) => {
 
 router.post('/logout', (req, res) => {
     if (req.session.loggedIn) {
-        res.session.destroy(() => {
+        req.session.destroy(() => {
             res.status(204).end();
         });
     }

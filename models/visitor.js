@@ -17,7 +17,11 @@ Visitor.init(
     phoneNumber: {
       type: DataTypes.INTEGER,
       allowNull: false,
-    }
+    },
+    roomNumber: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
   {
     sequelize

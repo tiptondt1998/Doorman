@@ -5,4 +5,3 @@ const Visitor = require('./visitor')
 const Screener = require("./screener");
 
 module.exports = { Nurse, Patient, Room, Visitor, Screener };
-

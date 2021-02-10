@@ -31,7 +31,19 @@ header {
     border-radius: 5px;
 }
 
+#logout {
+    font-size: large;
+    padding: 5px;
+    margin-right: 1rem;
+    background: rgb(204, 54, 54);
+    border-radius: 5px;
+}
+
 #login:hover {
+    color: rgb(1, 6, 78);
+}
+
+#logout:hover {
     color: rgb(1, 6, 78);
 }
 

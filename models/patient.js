@@ -5,12 +5,12 @@ const { Model, DataTypes } = require('sequelize');
 class Patient extends Model {}
 Patient.init(
   {
-    name: {
-      type: DataTypes.STRING(255),
-      allowNull: false,
-    },
     roomNumber: {
       type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    name: {
+      type: DataTypes.STRING(255),
       allowNull: false,
     },
     covidPositive: {
@@ -20,8 +20,8 @@ Patient.init(
       allowNull: true,
     },
     finalVisit: {
-        type: DataTypes.TEXT,
-        allowNull: true
+        type: DataTypes.STRING,
+        allowNull: false
     },
   },
   {
