@@ -58,8 +58,6 @@ router.get('/:id', (req, res) => {
     });
 });
 
-;
-
 router.put('/:id', withAuth, (req, res) => {
   Patient.update(
     {
@@ -82,6 +80,24 @@ router.put('/:id', withAuth, (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+});
+
+router.post('/', (req, res) => {
+  Patient.create({
+      roomNumber: req.body.roomNumber,
+      name: req.body.name,
+      covidPositive: req.body.covidPositive,
+      finalVisit: req.body.finalVisit
+    }
+  )
+  .then(dbPatientData => {
+    console.log(dbPatientData);
+      res.json(dbPatientData);
+  })
+  .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+  });
 });
 
 router.delete('/:id', withAuth, (req, res) => {

@@ -101,6 +101,13 @@ header {
     margin-left: 46%;
 }
 
+.add-patient {
+    width: 2rem;
+}
+#patient-name {
+    width: 150px;
+}
+
 table {
     width: 100%;
   }
@@ -114,12 +121,20 @@ table {
     padding: 2px 4px;
   }
 
-  footer {
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    height: 30px;
-    width: 100%
+  tr {
+      background-color: white;
   }
+
+/* #add-patient {
+
+} */
+
+footer {
+display: flex;
+justify-content: center;
+position: fixed;
+left: 0px;
+bottom: 0px;
+height: 30px;
+width: 100%
+}

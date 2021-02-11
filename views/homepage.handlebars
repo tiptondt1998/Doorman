@@ -18,3 +18,19 @@
   {{/each}}
 </tbody>
 </table>
+<form id="add-patient-form">
+  <label for="patient-room-number">Patient room number:</label>
+  <input type="text" class="add-patient" id="patient-room-number"/>
+
+  <label for="patient-name">Patient name:</label>
+  <input type="text" id="patient-name"/>
+
+  <label for="patient-covid-positive">COVID Positive (Y/N):</label>
+  <input type="text" class="add-patient" id="patient-covid-positive"/>
+
+  <label for="patient-final-visit">Final visit (Y/N):</label>
+  <input type="text" class="add-patient" id="patient-final-visit"/>
+
+  <button class="add-btn" type="submit">Add patient</button>
+</form>
+<script src="javascript/add-patient.js"></script>

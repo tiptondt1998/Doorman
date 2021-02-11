@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  User.create({
+  Nurse.create({
       username: req.body.username,
       password: req.body.password
   })
