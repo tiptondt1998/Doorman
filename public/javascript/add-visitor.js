@@ -4,7 +4,7 @@ async function addVisitorFormHandler(event) {
     const name = document.querySelector('#visitor-name').value.trim();
     const phoneNumber = document.querySelector('#visitor-phone-number').value.trim();
     const roomNumber = document.querySelector('#visitor-room-number').value.trim();
-    
+    console.log('<------AAAAA------>')
     if (name) {
         const response = await fetch('/api/visitor', {
             method: 'POST',
@@ -22,6 +22,7 @@ async function addVisitorFormHandler(event) {
             alert(response.statusText);
         }
     }
+    console.log('<------BBBBB------>')
 }
 
 document
