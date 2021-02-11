@@ -4,7 +4,8 @@ const { Visitor } = require('../../models');
 router.post('/', (req, res) => {
     Visitor.create({
         name: req.body.name,
-        phoneNumber: req.body.phoneNumber
+        phoneNumber: req.body.phoneNumber,
+        roomNumber: req.body.roomNumber
       }
     )
     .then(dbVisitorData => {
@@ -12,6 +13,7 @@ router.post('/', (req, res) => {
         res.json(dbVisitorData);
     })
     .catch(err => {
+      console.log('ABCDE------------>')
         console.log(err);
         res.status(500).json(err);
     });

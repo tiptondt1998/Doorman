@@ -108,6 +108,10 @@ header {
     width: 150px;
 }
 
+#visitor-room-number {
+    width: 2rem;
+}
+
 table {
     width: 100%;
 }
@@ -129,7 +133,7 @@ tr {
 
 } */
 
-#add-patient-div {
+#add-div {
     background-color: lightblue;
     margin: 2rem;
     padding: 0.5rem 2rem 2rem 2rem;

@@ -6,6 +6,7 @@
             <th>COVID Positive [Y/N]</th>
             <th>Final Visit [Y/N]</th>
             <th>Visitor Name and Phone #</th>
+            <th>Delete</th>
   </tr>
 </thead>
 <tbody>
@@ -18,7 +19,7 @@
   {{/each}}
 </tbody>
 </table>
-<div id="add-patient-div">
+<div id="add-div">
   <h2 id="form-header">Add a patient:</h2>
   <form id="add-patient-form">
     <label for="patient-room-number">Patient room number:</label>
@@ -42,6 +43,9 @@
 
     <label for="visitor-phone-number">Visitor phone number:</label>
     <input type="text" class="add-visitor" id="visitor-phone-number"/>
+    
+    <label for="visitor-room-number">Visitor room number:</label>
+    <input type="text" class="add-visitor" id="visitor-room-number"/>
 
     <button class="add-btn" type="submit">Submit</button>
   </form>
