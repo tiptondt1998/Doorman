@@ -91,7 +91,6 @@ router.post('/', (req, res) => {
     }
   )
   .then(dbPatientData => {
-    console.log(dbPatientData);
       res.json(dbPatientData);
   })
   .catch(err => {

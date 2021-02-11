@@ -1,19 +1,15 @@
-async function addPatientFormHandler(event) {
+async function addVisitorFormHandler(event) {
     event.preventDefault();
 
-    const roomNumber = document.querySelector('#patient-room-number').value.trim();
-    const name = document.querySelector('#patient-name').value.trim();
-    const covidPositive = document.querySelector('#patient-covid-positive').value.trim();
-    const finalVisit = document.querySelector('#patient-final-visit').value.trim();
+    const name = document.querySelector('#visitor-name').value.trim();
+    const phoneNumber = document.querySelector('#visitor-phone-number').value.trim();
     
     if (name) {
-        const response = await fetch('/api/patient', {
+        const response = await fetch('/api/visitor', {
             method: 'POST',
             body: JSON.stringify({
-                roomNumber,
                 name,
-                covidPositive,
-                finalVisit
+                phoneNumber
             }),
             headers: { 'Content-Type': 'application/json' }
         });
@@ -27,5 +23,5 @@ async function addPatientFormHandler(event) {
 }
 
 document
-  .querySelector("#add-patient-form")
-  .addEventListener("submit", addPatientFormHandler);
+  .querySelector("#add-visitor-form")
+  .addEventListener("submit", addVisitorFormHandler);
