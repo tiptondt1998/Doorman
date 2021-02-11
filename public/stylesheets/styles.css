@@ -47,13 +47,13 @@ header {
     color: rgb(1, 6, 78);
 }
 
+#heading {
+    cursor: default;
+}
+
 #heading-bg {
     margin-left: 1rem;
     border-radius: 5px;
-}
-
-#heading:hover {
-    color: rgb(107, 117, 235);
 }
 
 #title{
@@ -110,24 +110,31 @@ header {
 
 table {
     width: 100%;
-  }
+}
   
-  table, th, td {
-    border: 1px solid lightgrey;
-    border-collapse: collapse;
-  }
-  
-  th, td {
-    padding: 2px 4px;
-  }
+table, th, td {
+border: 1px solid lightgrey;
+border-collapse: collapse;
+}
 
-  tr {
-      background-color: white;
-  }
+th, td {
+padding: 2px 4px;
+}
+
+tr {
+    background-color: white;
+}
 
 /* #add-patient {
 
 } */
+
+#add-patient-div {
+    background-color: lightblue;
+    margin: 2rem;
+    padding: 0.5rem 2rem 2rem 2rem;
+    border-radius: 5px;
+}
 
 footer {
 display: flex;
