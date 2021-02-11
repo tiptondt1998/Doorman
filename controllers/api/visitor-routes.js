@@ -19,4 +19,4 @@ router.post('/', (req, res) => {
     });
 });
 
-module.exports = Visitor;
+module.exports = router;
