@@ -3,9 +3,10 @@ const Visitor = require('./visitor');
 const Nurse = require('./nurse');
 const Screener = require('./screener');
 
-Patient.hasOne(Visitor, {
+Visitor.hasOne(Patient);
+
+Patient.belongsTo(Visitor, {
     foreignKey: 'roomNumber'
 });
-Visitor.belongsTo(Patient);
 
 module.exports = { Patient, Visitor, Nurse, Screener };
