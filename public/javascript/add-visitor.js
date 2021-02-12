@@ -15,12 +15,7 @@ async function addVisitorFormHandler(event) {
             }),
             headers: { 'Content-Type': 'application/json' }
         })
-
-        // const body = await res.json()
-        // console.log('body: ', body);
-        // window.location.reload()
     }
-    
     // return body
     console.log('<------AAAAA------>')
 }
@@ -28,7 +23,7 @@ async function addVisitorFormHandler(event) {
 document
   .querySelector("#add-visitor-form")
   .addEventListener("submit", addVisitorFormHandler);
-
+  
 //   fetch('http://example.com/movies.json')
 //   .then(response => response.json())
 //   .then(data => console.log(data));

@@ -1,12 +1,6 @@
 const router = require('express').Router();
 const { Visitor, Patient } = require('../../models');
-const { restore } = require('../../models/room');
-
-// const foo = await Foo.create({ name: 'the-foo' });
-// const bar1 = await Bar.create({ name: 'some-bar' });
-// const bar2 = await Bar.create({ name: 'another-bar' });
-// console.log(await foo.getBar()); // null
-// await foo.setBar(bar1);
+//const { restore } = require('../../models/room');
 
 router.patch('/', async (req, res) => {
   try {
@@ -27,6 +21,25 @@ router.patch('/', async (req, res) => {
     console.log('Visitor Create Route Error: ', err);
     res.status(500).json(err);
   }
+});
+
+router.delete('/', (req, res) => {
+  Visitor.destroy({
+    where: {
+      roomNumber: req.body.roomNumber
+    }
+  })
+    .then(dbVisitorData => {
+      if (!dbVisitorData) {
+        res.status(404).json({ message: 'No visitor found' });
+        return;
+      }
+      res.json(dbVisitorData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 // Patient.findOne({

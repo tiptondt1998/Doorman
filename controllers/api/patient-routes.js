@@ -99,11 +99,11 @@ router.post('/', (req, res) => {
   });
 });
 
-router.delete('/:id', withAuth, (req, res) => {
+router.delete('/', withAuth, (req, res) => {
   console.log('id', req.params.id);
   Patient.destroy({
     where: {
-      id: req.params.id
+      roomNumber: req.body.roomNumber
     }
   })
     .then(dbPatientData => {
@@ -120,4 +120,3 @@ router.delete('/:id', withAuth, (req, res) => {
 });
 
 module.exports = router;
-

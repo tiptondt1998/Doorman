@@ -86,12 +86,12 @@ header {
     display: flex;
     justify-content: center;
     padding: 0.5rem;
- }
+}
 
- #login-form-title {
-     display: flex;
-     justify-content: center;
- }
+#login-form-title {
+    display: flex;
+    justify-content: center;
+}
 
 .center{
     margin-left: 50%;
@@ -109,6 +109,10 @@ header {
 }
 
 #visitor-room-number {
+    width: 2rem;
+}
+
+#delete-patient {
     width: 2rem;
 }
 
