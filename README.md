@@ -15,8 +15,10 @@ Patient screening application designed to assist in the organization of patient 
 None
 ## Usage
 Log in with existing nurse login information: <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Username: nurse1<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password: password
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Username: nurse1 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password: password <br />
+Add a patient via the 'Add a patient' form, then add that patient's visitor using the corresponding room number in the 'Add a visitor' form.
+Delete patients and visitors by entering the patient's room number.
 ## License
 ![license badge](https://img.shields.io/badge/license-MIT-blue)
 ## Credits
