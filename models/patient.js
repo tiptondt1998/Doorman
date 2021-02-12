@@ -5,8 +5,14 @@ const { Model, DataTypes } = require('sequelize');
 class Patient extends Model {}
 Patient.init(
   {
-    roomNumber: {
+    id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    roomNumber: {
+      type: DataTypes.STRING,
       allowNull: false,
       primaryKey: true
     },

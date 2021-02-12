@@ -6,25 +6,29 @@ async function addVisitorFormHandler(event) {
     const roomNumber = document.querySelector('#visitor-room-number').value.trim();
     console.log('<------AAAAA------>')
     if (name) {
-        const response = await fetch('/api/visitor', {
-            method: 'POST',
+        await fetch('/api/visitor', {
+            method: 'PATCH',
             body: JSON.stringify({
                 name,
                 phoneNumber,
                 roomNumber
             }),
             headers: { 'Content-Type': 'application/json' }
-        });
+        })
 
-        if (response.ok) {
-            document.location.replace('/');
-        } else {
-            alert(response.statusText);
-        }
+        // const body = await res.json()
+        // console.log('body: ', body);
+        // window.location.reload()
     }
+    
+    // return body
     console.log('<------AAAAA------>')
 }
 
 document
   .querySelector("#add-visitor-form")
   .addEventListener("submit", addVisitorFormHandler);
+
+//   fetch('http://example.com/movies.json')
+//   .then(response => response.json())
+//   .then(data => console.log(data));

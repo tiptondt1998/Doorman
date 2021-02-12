@@ -5,6 +5,8 @@ const exphbs = require('express-handlebars');
 const log= require('log4js');
 const logger = log.getLogger("logs");
 const cookieParser = require('cookie-parser');
+const morgan = require('morgan')
+const cors = require('cors')
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -31,6 +33,8 @@ const sess = {
   })
 };
 
+app.use(morgan('dev'))
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));

@@ -21,11 +21,12 @@ router.get('/', withAuth, (req, res) => {
         const patients = dbPatientData.map(patient => patient.get({ plain: true }));
         patients.map(patient => {
             if (patient.Visitor) {
-                patient.Visitor = patient.Visitor.name + ' - ' + patient.Visitor.phoneNumber
+                return patient.Visitor = patient.Visitor.name + ' - ' + patient.Visitor.phoneNumber
             }
+            return patient.Visitor
         });
         console.log(req.session.loggedIn);
-        console.log(patients[0]);
+        console.log('>>>>>>>  Patients', patients);
         res.render('homepage', {
             patients,
             loggedIn: req.session.loggedIn

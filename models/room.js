@@ -5,7 +5,7 @@ class Room extends Model {}
 Room.init(
   {
     roomNumber: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       PrimaryKey: true
     },

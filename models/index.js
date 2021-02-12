@@ -8,7 +8,7 @@ Patient.hasOne(Visitor, {
 });
 
 Visitor.belongsTo(Patient, {
-    foreignKey: 'roomNumber'
+    foreignKey: 'room_number'
 });
 
 module.exports = { Patient, Visitor, Nurse, Screener };
