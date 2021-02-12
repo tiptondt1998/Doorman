@@ -17,7 +17,7 @@ None
 1. Log in with existing nurse login information: <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Username: nurse1 <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password: password <br />
-2. Add a patient via the 'Add a patient' form, then add that patient's visitor using the corresponding room number in the 'Add a visitor' form.
+2. Add a patient via the 'Add a patient' form, then add that patient's visitor using the corresponding room number in the 'Add a visitor' form. Patients are only allowed one visitor.
 3. Delete patients and visitors by entering the patient's room number.
 ## License
 ![license badge](https://img.shields.io/badge/license-MIT-blue)
