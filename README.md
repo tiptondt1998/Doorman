@@ -14,8 +14,8 @@ Patient screening application designed to assist in the organization of patient 
 ## Installation
 None
 ## Usage
-Log in with existing nurse login information: 
-Username: nurse1
+Log in with existing nurse login information: <br />
+Username: nurse1<br />
 Password: password
 ## License
 ![license badge](https://img.shields.io/badge/license-MIT-blue)
