@@ -22,7 +22,7 @@ async function addVisitorFormHandler(event) {
             alert(response.statusText);
         }
     }
-    console.log('<------BBBBB------>')
+    console.log('<------AAAAA------>')
 }
 
 document

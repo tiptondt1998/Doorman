@@ -51,18 +51,14 @@ router.get('/', (req, res) => {
 
 router.post('/login', (req, res) => {
     const username = req.body.username 
-    console.log(req.body.password);
     Nurse.findOne({ where: { username: username } }).then(dbNurseData => {
         if (!dbNurseData) {
-            console.log('1');
             res.redirect('/login');
         } else if (!dbNurseData.validPassword(req.body.password)) {
-            console.log(dbNurseData);
             res.redirect('/login');
             res.status(400).json({ message: 'Incorrect password!' });
             return;
         } else {
-            console.log('3');
             req.session.save(() => {
             req.session.username = dbNurseData.username;
             req.session.loggedIn = true;

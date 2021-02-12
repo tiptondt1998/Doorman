@@ -8,6 +8,7 @@ Patient.init(
     roomNumber: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      primaryKey: true
     },
     name: {
       type: DataTypes.STRING(255),
@@ -23,6 +24,14 @@ Patient.init(
         type: DataTypes.STRING,
         allowNull: false
     },
+    /* visitor_id: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+        references: {
+          model: 'Visitor',
+          key: 'id'
+        }
+    }, */
   },
   {
     

@@ -21,7 +21,11 @@ Visitor.init(
     roomNumber: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      foreignKey: true
+      /* foreignKey: true, */
+      // references: {
+      //   model: 'Patient',
+      //   key: 'roomNumber'
+      // }
     },
   },
   {
