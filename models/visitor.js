@@ -17,10 +17,25 @@ Visitor.init(
     phoneNumber: {
       type: DataTypes.INTEGER,
       allowNull: false,
-    }
+    },
+    roomNumber: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      // defaultValue: sequelize.literal(455),
+      foreignKey: true,
+      // references: {
+      //   model: 'Patient',
+      //   key: 'roomNumber'
+      // }
+    },
   },
   {
-    sequelize
+    sequelize,
+    modelName: 'Visitor',
+    timestamp: false,
+    freezeTableName: true,
+    underscored: true
   }
 );
+
 module.exports = Visitor;

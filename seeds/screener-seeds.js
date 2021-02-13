@@ -2,6 +2,7 @@ const { Screener } = require("../models");
 
 const screenerdata = [
   {
+
     username: "Dylan",
     password: "test",
     id: 1,
@@ -23,6 +24,7 @@ const screenerdata = [
     username: "Andrew",
     password: "test",
     id: 4,
+
   },
 ];
 const seedScreener = () => Screener.bulkCreate(screenerdata);

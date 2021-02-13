@@ -6,8 +6,7 @@ router.get('/', (req, res) => {
   console.log('======================');
   Patient.findAll({
     attributes: [
-      'name',
-      'room',
+      'room'
     ],
     include: [
       {
@@ -52,8 +51,6 @@ router.get('/:id', (req, res) => {
     });
 });
 
-;
-
 router.put('/:id', withAuth, (req, res) => {
   Patient.update(
     {
@@ -78,11 +75,28 @@ router.put('/:id', withAuth, (req, res) => {
     });
 });
 
-router.delete('/:id', withAuth, (req, res) => {
+router.post('/', (req, res) => {
+  Patient.create({
+      roomNumber: req.body.roomNumber,
+      name: req.body.name,
+      covidPositive: req.body.covidPositive,
+      finalVisit: req.body.finalVisit
+    }
+  )
+  .then(dbPatientData => {
+      res.json(dbPatientData);
+  })
+  .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+  });
+});
+
+router.delete('/', withAuth, (req, res) => {
   console.log('id', req.params.id);
   Patient.destroy({
     where: {
-      id: req.params.id
+      roomNumber: req.body.roomNumber
     }
   })
     .then(dbPatientData => {
@@ -99,4 +113,3 @@ router.delete('/:id', withAuth, (req, res) => {
 });
 
 module.exports = router;
-

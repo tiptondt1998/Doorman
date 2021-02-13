@@ -1,0 +1,155 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(146, 153, 223);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+h1 {
+    background-color: rgb(1, 6, 78);
+    padding: 5px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#login {
+    font-size: large;
+    padding: 5px;
+    margin-right: 1rem;
+    background: rgb(0, 58, 250);
+    border-radius: 5px;
+}
+
+#logout {
+    font-size: large;
+    padding: 5px;
+    margin-right: 1rem;
+    background: rgb(204, 54, 54);
+    border-radius: 5px;
+}
+
+#login:hover {
+    color: rgb(1, 6, 78);
+}
+
+#logout:hover {
+    color: rgb(1, 6, 78);
+}
+
+#heading {
+    cursor: default;
+}
+
+#heading-bg {
+    margin-left: 1rem;
+    border-radius: 5px;
+}
+
+#title{
+    margin-left: 46%;
+    margin-top: 1%;
+}
+
+#title b{
+    font-size: 40px;
+}
+
+#login-form {
+    display: flex;
+    flex-flow: column wrap;
+    margin-top: 5%;
+    background-color: lightblue;
+    border-radius: 5px;
+}
+
+#login-div {
+    display: flex;
+    justify-content: center;
+}
+
+.login-field {
+    padding: 0.5rem;
+}
+
+#login-form-btn {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+#login-form-title {
+    display: flex;
+    justify-content: center;
+}
+
+.center{
+    margin-left: 50%;
+}
+
+.centerField{
+    margin-left: 46%;
+}
+
+.add-patient {
+    width: 2rem;
+}
+#patient-name {
+    width: 150px;
+}
+
+#visitor-room-number {
+    width: 2rem;
+}
+
+#delete-patient {
+    width: 2rem;
+}
+
+table {
+    width: 100%;
+}
+  
+table, th, td {
+border: 1px solid lightgrey;
+border-collapse: collapse;
+}
+
+th, td {
+padding: 2px 4px;
+}
+
+tr {
+    background-color: white;
+}
+
+/* #add-patient {
+
+} */
+
+#add-div {
+    background-color: lightblue;
+    margin: 2rem;
+    padding: 0.5rem 2rem 2rem 2rem;
+    border-radius: 5px;
+}
+
+footer {
+display: flex;
+justify-content: center;
+position: fixed;
+left: 0px;
+bottom: 0px;
+height: 30px;
+width: 100%
+}

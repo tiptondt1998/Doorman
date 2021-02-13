@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
     include: [
       {
         model: Nurse,
-        attributes: ['Name', 'Password'],
+        attributes: ['username', 'password'],
       },
     ]
   })
@@ -23,19 +23,39 @@ router.get('/', (req, res) => {
     });
 });
 
+router.post('/', (req, res) => {
+  Nurse.create({
+      username: req.body.username,
+      password: req.body.password
+  })
+  .then(dbUserData => {
+      req.session.save(() => {
+          req.session.user_id = dbUserData.id;
+          req.session.username = dbUserData.username;
+          req.session.loggedIn = true;
+
+          res.json(dbUserData);
+      });
+  })
+  .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+  });
+});
+
 router.get('/:id', (req, res) => {
   Nurse.findOne({
     where: {
       id: req.params.id
     },
     attributes: [
-      'Name',
-      'Password',
+      'username',
+      'password',
     ],
     include: [
       {
         model: Nurse ,
-        attributes: ['Name', 'Password'],
+        attributes: ['username', 'password'],
       },
     ]
   })
