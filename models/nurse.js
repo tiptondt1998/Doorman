@@ -49,48 +49,4 @@ Nurse.init(
   }
 );
 
-  /* Nurse.prototype.validPassword = function(password) {
-    return bcrypt.compareSync(password, this.password)
-  } */
-/*   Nurse.addHook("beforeCreate", (nurseType) => {
-    nurseType.password = bcrypt.hashSync(nurseType.password, bcrypt.genSaltSync(10), null)
-  });
- */
-
-
-/* module.exports = function(sequelize, DataTypes) {
-  // class Nurse extends Model {}}
-const Nurse = sequelize.define("Nurse", {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
-    },
-    username: {
-      type: DataTypes.STRING(255),
-      allowNull: false,
-    },
-    password: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-    },
-  },
-  {
-    sequelize,
-    modelName: 'Nurse',
-    timestamp: false,
-    freezeTableName: true,
-    underscored: true,
-    tableName: 'Nurse'
-  });
-  nurse.prototype.validPassword = function(password) {
-    return bcrypt.compareSync(password, this.password)
-  }
-  nurse.addHook("beforeCreate", (nurseType) => {
-    nurseType.password = bcrypt.hashSync(nurseType.password, bcrypt.genSaltSync(10), null)
-  })
-  return nurse;
-}; */
-
 module.exports = Nurse;

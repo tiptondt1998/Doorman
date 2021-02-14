@@ -42,46 +42,4 @@ router.delete('/', (req, res) => {
     });
 });
 
-// Patient.findOne({
-//   where: { roomNumber: req.body.roomNumber },
-// }).then((dbRoomNumber) => {
-//   console.log('>>>> roomNumber: ', dbRoomNumber.roomNumber);
-//   Visitor.create(
-//     {
-//       name: req.body.name,
-//       phoneNumber: req.body.phoneNumber,
-//       roomNumber: `${dbRoomNumber.roomNumber}`,
-//     },
-//     {
-//       where: {
-//       },
-//     }
-//   ).then((dbVisitorData) => {
-//     console.log(dbVisitorData);
-//   });
-// });
-
-// Visitor.create({
-//     name: req.body.name,
-//     phoneNumber: req.body.phoneNumber,
-//     roomNumber: req.body.roomNumber
-//   },
-// //   {
-// //     include: [
-// //     {
-// //       model: Patient,
-// //       as: req.body.roomNumber
-// //     }
-// //   ]
-// // }
-// )
-// .then(dbVisitorData => {
-//   console.log(dbVisitorData);
-//     res.json(dbVisitorData);
-// })
-// .catch(err => {
-//     console.log('Visitor Create Route Error: ', err);
-//     res.status(500).json(err);
-// });
-
 module.exports = router;

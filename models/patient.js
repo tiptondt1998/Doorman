@@ -30,14 +30,6 @@ Patient.init(
         type: DataTypes.STRING,
         allowNull: false
     },
-    /* visitor_id: {
-        type: DataTypes.INTEGER,
-        allowNull: true,
-        references: {
-          model: 'Visitor',
-          key: 'id'
-        }
-    }, */
   },
   {
     

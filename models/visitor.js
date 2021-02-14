@@ -21,12 +21,7 @@ Visitor.init(
     roomNumber: {
       type: DataTypes.STRING,
       allowNull: true,
-      // defaultValue: sequelize.literal(455),
-      foreignKey: true,
-      // references: {
-      //   model: 'Patient',
-      //   key: 'roomNumber'
-      // }
+      foreignKey: true
     },
   },
   {

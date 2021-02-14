@@ -36,18 +36,6 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-/* // GET /api/users
-router.get('/', (req, res) => {
-    Nurse.findAll({
-        attributes: { exclude: ['password'] }
-    })
-        .then(dbNurseData => res.json(dbNurseData))
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-}); */
-
 router.post('/login', (req, res) => {
     const username = req.body.username 
     Nurse.findOne({ where: { username: username } }).then(dbNurseData => {
