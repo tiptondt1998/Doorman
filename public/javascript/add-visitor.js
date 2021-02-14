@@ -7,7 +7,7 @@ async function addVisitorFormHandler(event) {
     console.log('<------AAAAA------>')
     if (name) {
         await fetch('/api/visitor', {
-            method: 'PATCH',
+            method: 'PUT',
             body: JSON.stringify({
                 name,
                 phoneNumber,

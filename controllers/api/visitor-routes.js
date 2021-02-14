@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Visitor, Patient } = require('../../models');
 //const { restore } = require('../../models/room');
 
-router.patch('/', async (req, res) => {
+router.put('/', async (req, res) => {
   try {
     const patient = await Patient.findOne({
       where: { roomNumber: req.body.roomNumber },
