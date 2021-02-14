@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "description": "* [Github](README.md/#Github)\r * [Description](README.md/#Description)\r * [Installation](README.md/#Installation)\r * [Usage](README.md/#Usage)\r * [License](README.md/#License)\r * [Credits](README.md/#Credits)\r * [Questions](README.md/#Questions)\r ## Github\r https://github.com/tiptondt1998/Doorman\r ## Description\r Application that allows screener to consistently enforce visitor policy\r ## Installation\r  none\r ## Usage\r none\r ## License\r none\r ## Credits\r tiptondt1998 andrewahler jamiedelange jessm91 jbowser82\r ## Questions\r Contact me at: dylan.tipton@live.com",
   "main": "server.js",
+  "engines": {
+    "node": "14.15.x",
+    "npm": "6.14.x"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "seed": "node seeds/index.js"
+    "seed": "node seeds/index.js",
+    "build": "npm run seed"
   },
+  "heroku-run-build-script": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tiptondt1998/Doorman.git"
