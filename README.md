@@ -10,14 +10,18 @@
 ## Github
 https://github.com/tiptondt1998/Doorman
 ## Description
-Application that allows screener to consistently enforce visitor policy
+Patient screening application designed to assist in the organization of patient location and information in a hospital
 ## Installation
- none
+None
 ## Usage
-none
+1. Log in with existing nurse login information: <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Username: nurse1 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Password: password <br />
+2. Add a patient via the 'Add a patient' form, then add that patient's visitor using the corresponding room number in the 'Add a visitor' form. Patients are only allowed one visitor.
+3. Delete patients and visitors by entering the patient's room number.
 ## License
-none
+![license badge](https://img.shields.io/badge/license-MIT-blue)
 ## Credits
-tiptondt1998 andrewahler jamiedelange jessm91
+jamiedelange tiptondt1998 andrewahler jessm91
 ## Questions
-Contact me at: dylan.tipton@live.com
+Contact me at: jamie.de.lange@mac.com, dylan.tipton@live.com
