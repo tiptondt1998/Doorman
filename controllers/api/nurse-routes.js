@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const cookie = require('express-session/session/cookie');
 const { Nurse } = require('../../models');
 const withAuth= require("../../utils/auth");
 
@@ -64,6 +65,13 @@ router.get('/:id', (req, res) => {
         res.status(404).json({ message: 'No nurse found' });
         return;
       }
+      res.cookie('auth', dbNurseData, {
+        expires: new Date(Date.now() + '1440m'),
+        secure: process.env.NODE_ENV === 'production' ? true : false,
+        httpOnly: true,
+        sameSite: 'strict'
+      })
+      res.set('auth', dbNurseData);
       res.json(dbNurseData);
     })
     .catch(err => {
